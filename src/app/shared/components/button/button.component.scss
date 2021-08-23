@@ -1,0 +1,31 @@
+@import "src/assets/variables";
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 227px;
+  height: 45px;
+  background: $main;
+  border-radius: 4px;
+  cursor: pointer;
+  color: $white;
+
+  transition: 0.2s all;
+
+  &:hover {
+    color: $main;
+    border: 1px solid $main;
+    background: $secondary;
+  }
+
+  &.secondary {
+    background: $white;
+    border: 1px solid $main;
+    color: $main;
+
+    &:hover {
+      background: $secondary;
+    }
+  }
+}
