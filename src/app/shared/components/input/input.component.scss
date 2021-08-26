@@ -1,0 +1,27 @@
+@import "src/assets/variables";
+
+:host {
+  display: block;
+  width: 331px;
+  height: 45px;
+  background: $white;
+  border: 1px solid $grey;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+
+  input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    padding: 16px 12px;
+
+    ::placeholder {
+      color: $grey;
+    }
+
+    &:focus{
+      outline: none;
+    }
+  }
+}

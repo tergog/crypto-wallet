@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crypto-wallet';
+
+  public form: FormGroup;
+
+  constructor() {
+    this.form = new FormGroup({
+      name: new FormControl(''),
+      password: new FormControl('')
+    });
+
+    this.form.valueChanges.subscribe(v => console.log(v))
+  }
 }

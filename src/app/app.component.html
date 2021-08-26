@@ -1,4 +1,9 @@
 <app-button [text]="'Main'"></app-button>
 <app-button [text]="'Secondary'" class="secondary"></app-button>
 
+<div [formGroup]="form">
+  <app-input formControlName="name" [placeholder]="'Name'"></app-input>
+  <app-input formControlName="password" [type]="'password'" [placeholder]="'Password'"></app-input>
+</div>
+
 <router-outlet></router-outlet>
