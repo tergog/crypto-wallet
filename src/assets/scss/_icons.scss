@@ -1,0 +1,9 @@
+i {
+  display: block;
+
+  &.logo {
+    width: 60px;
+    height: 58px;
+    background-image: url(../img/logo.svg);
+  }
+}

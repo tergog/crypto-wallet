@@ -1,3 +1,5 @@
+@import "src/assets/variables";
+
 .title {
   font-size: 36px;
   line-height: 42px;
@@ -16,5 +18,14 @@
   &__md {
     font-size: 14px;
     line-height: 16px;
+  }
+
+  &__logo {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  &__white {
+    color: $white;
   }
 }
