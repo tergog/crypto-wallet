@@ -1,4 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/style";
+@import "assets/variables";
+
 * {
   box-sizing: border-box;
+}
+
+* {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.link {
+  color: $main;
+  cursor: pointer;
 }

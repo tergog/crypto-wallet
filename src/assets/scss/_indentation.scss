@@ -1,0 +1,23 @@
+.m {
+  &__b {
+    &--10 {
+      margin-bottom: 10px;
+    }
+
+    &--20 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__l {
+    &--5 {
+      margin-left: 5px;
+    }
+  }
+
+  &__r {
+    &--10 {
+      margin-right: 10px;
+    }
+  }
+}

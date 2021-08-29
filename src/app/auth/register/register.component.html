@@ -1,0 +1,14 @@
+<h1 class="title text__center">
+  Sign Up
+</h1>
+
+<div [formGroup]="form">
+  <app-input class="m__b--20" [placeholder]="'Email'" formControlName="email"></app-input>
+  <app-input class="m__b--20" [type]="'password'" [placeholder]="'Password'" formControlName="password"></app-input>
+  <div class="d__flex d__flex--align-center m__b--20">
+    <app-checkbox class="m__r--10" formControlName="terms"></app-checkbox>
+    <span class="text__sm">I am over 18 years old, and I agree <a class="link m__l--5">Terms of Use</a></span>
+  </div>
+  <app-button class="m__b--10" [text]="'Create Account'"></app-button>
+  <span class="d__flex d__flex--justify-center text__md">Already registered?<a class="link m__l--5">Log In</a></span>
+</div>
