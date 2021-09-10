@@ -6,4 +6,18 @@ i {
     height: 58px;
     background-image: url(../img/logo.svg);
   }
+
+  &.eye {
+    cursor: pointer;
+    width: 16px;
+    height: 12px;
+    background-image: url(../img/eye.svg);
+  }
+
+  &.eye-blue {
+    cursor: pointer;
+    width: 16px;
+    height: 12px;
+    background-image: url(../img/eye-blue.svg);
+  }
 }

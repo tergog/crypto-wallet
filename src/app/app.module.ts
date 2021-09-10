@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from 'src/app/core/core.module';
+import { UtilsService } from 'src/app/shared/services/utils.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { CoreModule } from 'src/app/core/core.module';
     ReactiveFormsModule,
     CoreModule
   ],
-  providers: [],
+  providers: [UtilsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

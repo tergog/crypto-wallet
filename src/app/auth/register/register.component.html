@@ -3,8 +3,22 @@
 </h1>
 
 <div [formGroup]="form">
-  <app-input class="m__b--20" [placeholder]="'Email'" formControlName="email"></app-input>
-  <app-input class="m__b--20" [type]="'password'" [placeholder]="'Password'" formControlName="password"></app-input>
+  <app-input [class.m__b--20]="!email.errors" [class.m__b--10]="email.errors" [placeholder]="'Email'" formControlName="email"></app-input>
+  <span class="d__block error" *ngIf="email.errors?.required && email.touched && !email.errors?.emailInvalid">
+    {{ cErrors.required }}
+  </span>
+  <span class="d__block error" *ngIf="email.errors?.required && email.touched || email.errors?.emailInvalid">
+    {{ cErrors.emailInvalid }}
+  </span>
+  <app-input class="m__b--20" [type]="showPassword ? 'text' : 'password'" [placeholder]="'Password'" formControlName="password">
+    <i [class.eye]="!showPassword" [class.eye-blue]="showPassword" (click)="onEyeIconClick()"></i>
+  </app-input>
+  <span class="d__block error" *ngIf="password.errors?.required && password.touched && !password.errors?.passwordCombination">
+    {{ cErrors.required }}
+  </span>
+  <span class="d__block error" *ngIf="!password.errors?.required && (password.touched && password.errors?.passwordCombination)">
+    {{ cErrors.passwordCombination }}
+  </span>
   <div class="d__flex d__flex--align-center m__b--20">
     <app-checkbox class="m__r--10" formControlName="terms"></app-checkbox>
     <span class="text__sm">I am over 18 years old, and I agree <a class="link m__l--5">Terms of Use</a></span>
